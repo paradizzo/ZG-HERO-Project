@@ -1,13 +1,12 @@
 
+import pessoas.*
 
-import pessoas.Candidatos
-import pessoas.Empresas
 //Lucas Paradizo
 class Aplicação {
     static void main(String[] args) {
         ArrayList<Candidatos> arrayCandidatos = new ArrayList<Candidatos>()
         ArrayList<Empresas> arrayEmpresas = new ArrayList<Empresas>()
-
+        ArrayList<Tecnologias> arrayTecnologias = new ArrayList<>()
 
 
         arrayCandidatos.add(new Candidatos("Mauricio Stelmacheck","Stelmacheck@gmail.com", 789456123, 20, "Espirito Santo", 29160882, "Gosto de viver", ["Python", "Java", "HTML","CSS", "alo"]))
@@ -33,6 +32,8 @@ class Aplicação {
             println("Selecione uma opção, 0 fecha o programa: ")
             println("1. LISTAR CANDIDATOS ")
             println("2. LISTAR EMPRESAS ")
+            println("3. ADICIONAR CANDIDATOS ")
+            println("4. ADICIONAR EMPRESAS ")
 
             ch = scannerNum.nextInt()
             switch (ch) {
@@ -58,9 +59,109 @@ class Aplicação {
                     }
                     System.out.println("----------------");
                     break;
+                case 3:
+                    System.out.println("----------------");
+                    println("Digite o nome do candidato: ")
+                    String nomeCandidato = scanner.nextLine()
+                    println("Digite o email do candidato:  ")
+                    String emailCandidato = scanner.nextLine()
+                    println("Digite o cpf do candidato: ")
+                    Long cpfCandidato = scannerNum.nextLong()
+                    println("Digite a idade do candidato: ")
+                    int idadeCandidato = scannerNum.nextInt()
+                    println("Digite o estado do candidato: ")
+                    String estadoCandidato = scanner.nextLine()
+                    println("Digite o cep do candidato: ")
+                    Long CEPcandidato = scannerNum.nextLong()
+                    println("Digite a descrição do candidato: ")
+                    String descriçãoCandidato = scanner.nextLine()
+                    int chDois;
+                    println("Selecione suas competências, 0 encerra a seleção  ")
+                    ArrayList<Tecnologias> tecnologiasCandidatos = new ArrayList<>()
+                    do {
+
+                        println("1.PYTHON")
+                        println("2.ANGULAR")
+                        println("3.METODOLOGIAS AGEIS")
+                        println("4.JAVA")
+                        println("5.GROOVY")
+                        chDois = scannerNum.nextInt()
+
+                        switch (chDois){
+                            case 1:
+                                tecnologiasCandidatos.add("python")
+                                break
+                            case 2:
+                                tecnologiasCandidatos.add("Angular")
+                                break
+                            case 3:
+                                tecnologiasCandidatos.add("Metodologias Ageis")
+                                break
+                            case 4:
+                                tecnologiasCandidatos.add("Java")
+                                break
+                            case 5:
+                                tecnologiasCandidatos.add("Groovy")
+                        }
+
+                    }while (chDois != 0)
+                    arrayCandidatos.add(new Candidatos(nomeCandidato, emailCandidato, cpfCandidato, idadeCandidato, estadoCandidato, CEPcandidato, descriçãoCandidato, tecnologiasCandidatos))
+                    System.out.println("----------------");
+
+                    break
+
+                case 4:
+                    System.out.println("----------------");
+                    println("Digite o nome da empresa: ")
+                    String nomeEmpresa = scanner.nextLine()
+                    println("Digite o email da empresa: ")
+                    String emailEmpresa = scanner.nextLine()
+                    println("Digite o CNPJ da empresa sem traços e pontos: ")
+                    Long CNPJempresa = scannerNum.nextLong()
+                    println("Digite o pais da empresa: ")
+                    String paisEmpresa = scanner.nextLine()
+                    println("Digite o estado da empresa: ")
+                    String estadoEmpresa = scanner.nextLine()
+                    println("Digite o CEP da empresa: ")
+                    Long CEPempresa = scannerNum.nextLong()
+                    println("Digite a descrição da empresa: ")
+                    String descriçãoEmpresa = scanner.nextLine()
+                    println("Digite as tecnologias procuradas: 0 encerra a seleção  ")
+                    int chDois;
+                    ArrayList<Tecnologias>tecnologiasCandidatos = new ArrayList<>()
+                    do {
+                        println("1.PYTHON")
+                        println("2.ANGULAR")
+                        println("3.METODOLOGIAS AGEIS")
+                        println("4.JAVA")
+                        println("5.GROOVY")
+                        chDois = scannerNum.nextInt()
+
+                        switch (chDois){
+                            case 1:
+                                tecnologiasCandidatos.add("python")
+                                break
+                            case 2:
+                                tecnologiasCandidatos.add("Angular")
+                                break
+                            case 3:
+                                tecnologiasCandidatos.add("Metodologias Ageis")
+                                break
+                            case 4:
+                                tecnologiasCandidatos.add("Java")
+                                break
+                            case 5:
+                                tecnologiasCandidatos.add("Groovy")
+                        }
+
+                    }while (chDois != 0)
+                    arrayEmpresas.add(new Empresas(nomeEmpresa, emailEmpresa, CNPJempresa, paisEmpresa, estadoEmpresa, CEPempresa,descriçãoEmpresa,tecnologiasCandidatos))
+                    System.out.println("----------------");
+
             }
 
-        }while (ch != 0 )
-    }
 
-}
+            }while (ch != 0 )
+
+        }
+    }

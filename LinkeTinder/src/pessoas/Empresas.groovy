@@ -11,7 +11,7 @@ class Empresas {
     String estadoEmpresa
     Long CEPempresa
     String descriçãoEmpresa
-    ArrayList<String> tecnologias = new ArrayList<String>()
+    ArrayList<Tecnologias> tecnologias = new ArrayList<Tecnologias>()
 
     Empresas(String nomeEmpresa, String emailEmpresa, Long CNPJ, String paisEmpresa, String estadoEmpresa, Long CEPempresa, String descriçãoEmpresa, ArrayList<String> tecnologias) {
         this.nomeEmpresa = nomeEmpresa
@@ -90,15 +90,15 @@ class Empresas {
 
     @Override
     public String toString() {
-        return "Empresas: " +
-                "nome da empresa= " + nomeEmpresa +
-                ", email da empresa= " + emailEmpresa +
+        return "" +
+                "Nome da empresa= " + nomeEmpresa +
+                ", Email da empresa= " + emailEmpresa +
                 ", CNPJ= " + CNPJ +
-                ", pais= " + paisEmpresa +
-                ", estado= " + estadoEmpresa +
+                ", Pais= " + paisEmpresa +
+                ", Estado= " + estadoEmpresa +
                 ", CEP= " + CEPempresa +
-                ", descrição= " + descriçãoEmpresa +
-                ", tecnologias procuradas= " + tecnologias +
+                ", Descrição= " + descriçãoEmpresa +
+                ", Tecnologias procuradas= " + tecnologias +
                 '';
     }
 }

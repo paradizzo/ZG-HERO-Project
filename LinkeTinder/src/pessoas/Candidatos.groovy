@@ -89,15 +89,15 @@ class Candidatos {
 
     @Override
     public String toString() {
-        return "Candidato: " +
-                "nome= " + nomeCandidato +
-                ", email= " + emailCandidato +
+        return "" +
+                "Nome= " + nomeCandidato +
+                ", Email= " + emailCandidato +
                 ", CPF= " + CPFCandidato +
-                ", idade= " + idadeCandidato +
-                ", estado= " + estadoCandidato +
+                ", Idade= " + idadeCandidato +
+                ", Estado= " + estadoCandidato +
                 ", CEP= " + CEPCandidato +
-                ", descrição= '" + descriçãoCandidato +
-                ", tecnologias= " + tecnologias +
+                ", Descrição= " + descriçãoCandidato +
+                ", Tecnologias= " + tecnologias +
                 '';
     }
 }
