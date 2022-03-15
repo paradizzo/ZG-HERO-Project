@@ -1,0 +1,511 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+img {
+    max-width: 10ch;
+}
+
+
+.main {
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    height: 100vh;
+    display: none;
+}
+
+.headerMain {
+    text-align: center;
+    padding-top: 5ch;
+}
+.loginSectionMain {
+    padding: 1ch;
+}
+
+.loginBox {
+    background-color: white;
+    border-radius: 2ch;
+    padding: 2ch;
+    box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 20px 0px;
+}
+.toggleBox {
+    border-radius: .5ch;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding-bottom: 2ch;
+}
+.toggleBox a {
+    padding: .5ch;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    border-radius: 10ch;
+    text-decoration:  none;
+    color: white;
+    font-weight: 600;
+    margin: .2ch;
+    box-shadow: rgba(0, 0, 0, 0.38) 1px 1px 20px 0px;
+
+}
+.wraperLoginBoxCandidato{
+    display: none;
+}
+
+.wraperLoginBoxCandidato, .wraperLoginBoxEmpresa {
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    box-shadow: rgba(0, 0, 0, 0.53) 1px 1px 20px 0px;
+    padding: 2ch;
+    border-radius: 2ch;
+}
+.inputBox  input , .inputBoxCandidato input {
+    margin: .7ch;
+    padding: .5ch;
+    outline: none;
+}
+.criarEEsqueceuSenhaBox, .criarEEsqueceuSenhaBoxCandidato {
+    margin: .7ch;
+    line-height: 3ch;
+}
+
+.criarEEsqueceuSenhaBox a, .criarEEsqueceuSenhaBoxCandidato a {
+    text-decoration: none;
+    color: white;
+
+}
+.loginButtonBox , .loginButtonBoxCandidato {
+    text-align:  center;
+    margin-top: 5ch;
+    margin-bottom: 5ch;
+}
+
+.loginButtonBox  a, .loginButtonBoxCandidato a {
+    padding: 1ch 2ch;
+    background-color: white;
+    border-radius: 5ch;
+    text-decoration:  none;
+    color: #366e3c;
+    font-weight: 900;
+    border:  rgb(0, 0, 0) 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 20px 0px;
+
+}
+
+
+/** REGISTRO **/
+
+.registerEmpresa, .registerCandidato {
+    display: none;
+}
+.registerEmpresa, .registerCandidato {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    width: 30ch;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5ch;
+    background-color: white;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 0px 200px 1000px;
+    border-radius: 5ch;
+    border: 5px solid black;
+}
+.registerEmpresa img, .registerCandidato img {
+    max-width: 2ch;
+    margin-bottom: 2ch;
+}
+.registerEmpresa input, .registerCandidato input {
+    margin-bottom: 2ch;
+    outline: none;
+}
+.registerEmpresa a, .registerCandidato  a{
+    padding: 2ch;
+    text-decoration: none;
+    color: white;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    border-radius: 5ch;
+
+}
+.inputBoxForRegister {
+    margin-bottom: 3ch;
+}
+.registerCandidato ul {
+    margin-bottom: 4ch;
+    display: flex;
+    flex-wrap: wrap;
+    color: #233329;
+    font-weight: 700;
+    list-style: none;
+}
+.registerCandidato ul input{
+    margin-right: 5px;
+}
+.registerCandidato ul li {
+    margin-bottom: 1.5ch;
+    margin-right: 2.4ch;
+}
+
+/** MAIN MATCH EMPRESA **/
+.mainMatchEmpresa {
+    display: block;
+    padding: 2ch;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    height: 100vh;
+}
+.mainMatchEmpresa {
+    display: none;
+}
+.headerMatch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.avatarEmpresa {
+   height: 6ch;
+}
+.logoMatch {
+    height: 10ch;
+}
+.heroMatchEmpresa {
+    border-radius: 1ch;
+    padding: 1ch;
+    margin-top: 3ch;
+}
+.candidato {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3ch;
+    background-color: white;
+    border-radius: 1ch;
+    padding: 1.5ch;
+
+}
+.candidato img {
+    max-width: 3ch;
+    max-height: 3ch;
+}
+.descFunc, .graficoBox, .criarVagaBox{
+    display: none;
+}
+.tecnologias {
+    list-style: none;
+    line-height: 1.5ch;
+}
+.tecnologias li {
+    padding: 0.5ch;
+}
+#tecnologias-empresa li {
+    margin: 0px;
+}
+.likeBox  img {
+    width: 2ch;
+    margin: .5ch;
+}
+.menuBoxEmpresa img {
+   max-width: 2ch;
+
+}
+.menuBoxEmpresa {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.42) 0 0 1000px 1000px;
+    padding: 3ch;
+    text-align: right;
+    position: absolute;
+    margin: 0 auto;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4ch;
+    line-height: 5ch;
+    width: 80vw;
+
+}
+
+.menuBoxEmpresa ul {
+    text-align: left;
+    list-style: none;
+}
+.menuBoxEmpresa ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.menuBoxEmpresa {
+    display: none;
+}
+.criarVagaBox{
+    padding: 2ch;
+    background-color: white;
+    border-radius: 2ch;
+    text-align: right;
+    margin-top: 5ch;
+    box-shadow: rgba(0, 0, 0, 0.32) 0 0 100px 1000px;
+    z-index: 9999;
+
+}
+.criarVagaBox img {
+    max-width: 2ch;
+}
+.criarVagaBox ul{
+    text-align: left;
+    list-style: none;
+    margin-top: 2ch;
+}
+.criadorDeVaga {
+    text-align: center;
+}
+.criadorDeVaga ul {
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+    margin-bottom: 5ch;
+}
+.criadorDeVaga  input {
+    outline: none;
+    padding: .7ch;
+}
+.criadorDeVaga a {
+    padding: 1ch;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    text-decoration: none;
+    color: white;
+    border-radius: 2ch;
+    font-weight: 700;
+
+}
+
+
+.graficoBox {
+    background-color: white;
+    padding: 2ch ;
+    border-radius: 2ch;
+    margin-top: 5ch;
+}
+
+.mainCandidatoBox {
+    display: block;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    height: 100vh;
+    padding: 2ch;
+}
+.avatarFunc {
+    height: 6ch;
+
+}
+.vagasBox {
+    margin-top: 3ch;
+}
+.vagasBox ul {
+    list-style-type: none;
+}
+.vagasBox ul li {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 2ch;
+    padding: .5ch;
+    margin-top: 2ch;
+}
+.logoEmpresa {
+    max-height: 3ch;
+}
+.descVaga , .mainCandidatoBox{
+    display: none;
+}
+.main {
+    display: block;
+}
+
+
+    /** Botão hamburguer **/
+.menu-btn {
+    justify-content: center;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+}
+.menu-btn-burguer {
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #fafafa 74%);
+    transition: all .5s ease-in-out;
+}
+.menu-btn-burguer::before,
+.menu-btn-burguer::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #ffffff 74%);
+    transition: all .5s ease-in-out;
+}
+.menu-btn-burguer::before {
+    transform: translateY(-6px);
+}
+.menu-btn-burguer::after {
+    transform: translateY(6px);
+}
+.menu-btn.open .menu-btn-burguer{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.menu-btn.open .menu-btn-burguer::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn-burguer::after {
+    transform: rotate(-45deg)  translate(35px, 35px);
+}
+/** fim do botão hamburguer **/
+.criadorDeVaga ul li {
+    display: flex;
+}
+.criadorDeVaga ul li input {
+    margin-right: 1ch;
+}
+
+/** media query **/
+@media only screen and (min-width: 410px) {
+    .toggleBox a{
+        padding: 1ch;
+    }
+    .criadorDeVaga ul  p {
+    }
+    .criarVagaBox {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+    }
+}
+@media only screen and (min-width: 475px) {
+    .inputBox, .inputBoxCandidato {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .inputBox input, .inputBoxCandidato input {
+        margin-right: 10ch;
+    }
+}
+@media only screen and (min-width: 575px) {
+    .inputBoxCandidato, .inputBox {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .inputBoxCandidato input, .inputBox input {
+        margin: 1ch auto;
+    }
+    .criarEEsqueceuSenhaBoxCandidato, .criarEEsqueceuSenhaBox {
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 725px) {
+    * {
+        font-size: 16px;
+    }
+    .avatarFunc, .avatarEmpresa, .logoEmpresa {
+        height: 8ch;
+        max-height: 6ch;
+    }
+    .candidato img{
+        max-height: 10ch;
+        max-width: 10ch;
+    }
+    .tecnologias {
+        line-height: 2ch;
+    }
+    .criadorDeVaga ul li p {
+        font-size: 18px;
+    }
+    .criadorDeVaga ul li input {
+        align-self: center;
+    }
+    .nomeDaVaga {
+        margin-bottom: 4ch;
+    }
+    .criarVagaBox {
+        width: 50ch;
+        margin: 0 auto;
+    }
+    .avatarEmpresa {
+        max-width: 10ch;
+        max-height: 10ch;
+    }
+    .heroMatchEmpresa {
+        padding: 0;
+    }
+    .logoMatch {
+        max-height: 15ch;
+        max-width: 15ch;
+        height: 12ch;
+    }
+}
+@media only screen and (min-width: 900px) {
+    * {
+        font-size: 17px;
+    }
+    .loginBox {
+        max-width: 60ch;
+        margin: 2ch auto;
+
+    }
+    .criarVagaBox {
+    }
+    .criadorDeVaga {
+        margin-bottom: 4ch;
+    }
+    .candidato, .vagasBox ul li {
+        max-width: 80ch;
+        margin: 3ch auto;
+    }
+    .heroMatchEmpresa {
+        margin-top: 10ch;
+    }
+    .menuBoxEmpresa {
+        max-width: 60ch;
+        margin: 0 auto;
+    }
+    .graficoBox {
+        max-width: 80ch;
+        margin: 10ch auto;
+    }
+    #myChart {
+        margin: 0 auto;
+    }
+    .tecnologias {
+        display: flex;
+    }
+    .headerMatch {
+        margin-bottom: 10ch;
+    }
+    .vagasBox ul li {
+        padding: 1ch;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .mainMatchEmpresa, .mainCandidatoBox {
+        padding: 7ch;
+    }
+
+}
