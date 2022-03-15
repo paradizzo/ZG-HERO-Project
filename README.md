@@ -8,7 +8,34 @@ Futuramente será implementado o front end e o sistema de matchs.
 
 
 # Front end do Linketinder
-Dessa vez fiz a criação de uma logo juntando um fogo simbolizando o tinder e o " IN " do linkedin ( sujeito a mudanças ). O front end está incompleto, não guarda informações, a área de login está alí para ser adicionado no futuro um sistema de login, como não existe login, não fiz uma parte para o " Esqueceu sua senha ". 
-Para o inicio do projeto, clique em " Entrar como candidato " e faça um perfil, depois vá para " Entre como empresa ", faça login e veja o perfil criado no display. 
-Para testar as vagas, vá em " Entrar como empresa ", faça login e clique no botão hamburguer, crie a vaga, depois vá em " Entrar como candidato " e dê login, a vaga deverá estar no display.
-Futuramente será implementado um sistema consistente de login e muitas mudanças no design ( motivos de: Feio ) 
+
+
+Esse é o front-end do LinkeTinder; A logo é composta por um fogo, representando o Tinder, e o logo do Linkedin. O front end no atual momento se encontra incompleto. 
+### Features a serem adicionadas: 
+
+- Cadastro de usuário com retenção de dados
+- Cadastro de empresa com retenção de dados
+- Sistema de login
+- Banco de dados 
+- Sistema de like, deslike e match 
+- Upload de foto para ser usada nos perfis
+
+O design atual está simples, é próvavel que mudanças ocorram, ideias são bem vindas ;) . 
+Atualmente o projeto possui design responsivo.
+
+## Como fazer funcionar o front-end
+Depois de abrir o index.html, você verá uma aba de login. Dentro dessa área de login você pode escolher entrar como empresa ou como candidato.
+Vá até a aba " Entrar como candidato " e se registre, lá poderá escolher 4 tecnologias, inserir seu email, nome e senha.
+Depois vá até  a aba de empresas clicando em " Entrar como empresa " e faça login, o candidato recem criado deverá aparecer no display.
+No botão hamburguer você pode conferir adição de novas vagas, gráfico de barras, delete de vagas pelo seu nome e retorno ao menu principal.
+Se decidir criar uma vaga, escolha o seu nome e as tecnologias procuradas e a crie. 
+Na aba de candidato faça login e a vaga recém criada deverá aparecer no display.
+
+## Disclaimer front-end
+
+As imagens usadas são meramente ilustrativas, o nome que você colocar na sua empresa ou candidato estão definidos como " Anon " por padrão, devido a anonimidade, futuramente com o sistema de Match isso irá mudar, você poderá ver a foto, nome e empresa que está sendo pareado com.
+
+
+
+
+
