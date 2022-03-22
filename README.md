@@ -36,6 +36,13 @@ Na aba de candidato faça login e a vaga recém criada deverá aparecer no displ
 As imagens usadas são meramente ilustrativas, o nome que você colocar na sua empresa ou candidato estão definidos como " Anon " por padrão, devido a anonimidade, futuramente com o sistema de Match isso irá mudar, você poderá ver a foto, nome e empresa que está sendo pareado com.
 
 
+# Adição do REGEX no Linketinder
+
+### Bugs corrigidos: 
+- Caixas vaziam agora produzem um aviso de erro
+- Gráfico de barras funcional
+
+
 
 
 
