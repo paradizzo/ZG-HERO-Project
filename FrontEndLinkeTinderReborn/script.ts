@@ -40,28 +40,82 @@ $(closeBtnEmp).click(function (){
 
 // BOTOES DE REGISTRO
 $(document.querySelectorAll("#registerBtnEmp")).click(function (){
-    $(registerEmpresa).hide()
-    criarEmpresa()
+    checaEmail()
+    checaCPNJ()
+    checaCEP()
+    if (checaNomeEmpresa()){
+        if (checaSenhaEmpresa()){
+            if (checaEmail()){
+                if (checaCPNJ()){
+                    if (checaCEP()){
+                        criarEmpresa()
+                        $(registerEmpresa).hide()
+                    } else {
+                        window.alert("Insira CEP válido")
+                    }
+                }else {
+                    window.alert("Insira CNPJ válido")
+                }
+            } else {
+                window.alert("Insira Email válido")
+    }
+        }
+    }
+
+
 })
 $(document.querySelectorAll("#registerBtnCand")).click(function (){
-    $(registerCand).hide()
-    criarPessoa()
+    checaCpf()
+    checaTelefone()
+    checaLink()
+    checaEmailCand()
+    if (checaEmailCand()){
+        if (checaCpf()){
+            if (checaTelefone()){
+                if (checaLink()){
+                    if (checaNomeCandidato()){
+                        if (checaSenhaCandidato()){
+                            criarPessoa()
+                            $(registerCand).hide()
+                        }
+                    }
+                } else {
+                    window.alert("Insira um link válido")
+                }
+
+            } else {
+                window.alert("Insira um telefone válido")
+            }
+        }else  {
+            window.alert("Insira um CPF válido, exemplo: XXX.XXX.XXX-XX")
+        }
+    }else {
+        window.alert("Insira um email válido")
+    }
+
 })
 
 $(loginBtnEmp).click(function (){
-    $(document.querySelectorAll(".mainMatchEmpresa")).show()
-    $(document.querySelectorAll(".main")).hide()
-    $(document.querySelectorAll(".mainCandidatoBox")).hide()
-    $(document.querySelectorAll(".heroMatchEmpresa")).show()
-    $(document.querySelectorAll(".graficoBox")).hide()
+
+    if (loginEmpresa()){
+        $(document.querySelectorAll(".mainMatchEmpresa")).show()
+        $(document.querySelectorAll(".main")).hide()
+        $(document.querySelectorAll(".mainCandidatoBox")).hide()
+        $(document.querySelectorAll(".heroMatchEmpresa")).show()
+        $(document.querySelectorAll(".graficoBox")).hide()
+    }
 
 
 })
 $(loginBtnCand).click(function (){
-    $(document.querySelectorAll(".mainCandidatoBox")).show()
-    $(document.querySelectorAll(".main")).hide()
-    $(document.querySelectorAll(".mainMatchEmpresa")).hide()
-    $(document.querySelectorAll(".vagasBox")).show()
+
+    if (loginCandidato()){
+        $(document.querySelectorAll(".mainCandidatoBox")).show()
+        $(document.querySelectorAll(".main")).hide()
+        $(document.querySelectorAll(".mainMatchEmpresa")).hide()
+        $(document.querySelectorAll(".vagasBox")).show()
+    }
+
 
 })
 function criarEmpresa(){
@@ -176,37 +230,42 @@ $(document.querySelectorAll(".criarVagaEmp")).click(function () {
 
 })
 $(document.querySelectorAll(".registrarVaga")).click(function (){
-    let valueCandPython = $(document.querySelectorAll(".vagaPython")).is(':checked')
-    let valueCandJava = $(document.querySelectorAll(".vagaJava")).is(':checked')
-    let valueCandGroovy = $(document.querySelectorAll(".vagaGroovy")).is(':checked')
-    let valueCandAngular = $(document.querySelectorAll(".vagaAngular")).is(':checked')
-    let nomeVaga = $(document.querySelectorAll(".nomeDaVaga")).val()
-    console.log(nomeVaga)
-    let newLiTagCand = "";
-    newLiTagCand = `<ul id=\"${nomeVaga}\">\n                <li>\n                    <img src=\"images/empresaAnoni.png\" alt=\"\" class=\"logoEmpresa\">\n                    <p class=\"nomeVaga\">${nomeVaga}</p>\n                    <p class=\"nomeEmpresa\">Anon</p>\n                    <ul class=\"tecnologias\" id=\"tecnologias-empresa\">\n                    </ul>\n                    <ul class=\"likeBox\">\n                        <img src=\"images/Like.png\" alt=\"\">\n                        <img src=\"images/Deslike.png\" alt=\"\">\n                        <img src=\"images/SuperLike.png\" alt=\"\">\n                    </ul>\n\n                </li>\n            </ul>`
-    $(document.querySelectorAll(".vagasBox")).last().append(newLiTagCand)
-    if (valueCandPython) {
-        $(document.querySelectorAll("#tecnologias-empresa")).last().append(
-            '                        <li>Python</li>\n'
-        )
+
+    registroDeVaga()
+    if (registroDeVaga()){
+        let valueCandPython = $(document.querySelectorAll(".vagaPython")).is(':checked')
+        let valueCandJava = $(document.querySelectorAll(".vagaJava")).is(':checked')
+        let valueCandGroovy = $(document.querySelectorAll(".vagaGroovy")).is(':checked')
+        let valueCandAngular = $(document.querySelectorAll(".vagaAngular")).is(':checked')
+        let nomeVaga = $(document.querySelectorAll(".nomeDaVaga")).val()
+        console.log(nomeVaga)
+        let newLiTagCand = "";
+        newLiTagCand = `<ul id=\"${nomeVaga}\">\n                <li>\n                    <img src=\"images/empresaAnoni.png\" alt=\"\" class=\"logoEmpresa\">\n                    <p class=\"nomeVaga\">${nomeVaga}</p>\n                    <p class=\"nomeEmpresa\">Anon</p>\n                    <ul class=\"tecnologias\" id=\"tecnologias-empresa\">\n                    </ul>\n                    <ul class=\"likeBox\">\n                        <img src=\"images/Like.png\" alt=\"\">\n                        <img src=\"images/Deslike.png\" alt=\"\">\n                        <img src=\"images/SuperLike.png\" alt=\"\">\n                    </ul>\n\n                </li>\n            </ul>`
+        $(document.querySelectorAll(".vagasBox")).last().append(newLiTagCand)
+        if (valueCandPython) {
+            $(document.querySelectorAll("#tecnologias-empresa")).last().append(
+                '                        <li>Python</li>\n'
+            )
+        }
+        if (valueCandJava) {
+            $(document.querySelectorAll("#tecnologias-empresa")).last().append(
+                '                        <li>Java</li>\n'
+            )
+        }
+        if (valueCandGroovy) {
+            $(document.querySelectorAll("#tecnologias-empresa")).last().append(
+                '                        <li>Groovy</li>\n'
+            )
+        }
+        if (valueCandAngular) {
+            $(document.querySelectorAll("#tecnologias-empresa")).last().append(
+                '                        <li>Angular</li>\n'
+            )
+        }
+        $(document.querySelectorAll(".criarVagaBox")).hide()
+        $(document.querySelectorAll(".graficoBox")).hide()
     }
-    if (valueCandJava) {
-        $(document.querySelectorAll("#tecnologias-empresa")).last().append(
-            '                        <li>Java</li>\n'
-        )
-    }
-    if (valueCandGroovy) {
-        $(document.querySelectorAll("#tecnologias-empresa")).last().append(
-            '                        <li>Groovy</li>\n'
-        )
-    }
-    if (valueCandAngular) {
-        $(document.querySelectorAll("#tecnologias-empresa")).last().append(
-            '                        <li>Angular</li>\n'
-        )
-    }
-    $(document.querySelectorAll(".criarVagaBox")).hide()
-    $(document.querySelectorAll(".graficoBox")).hide()
+
 })
 $(document.querySelectorAll(".close-button-criar-vaga")).click(function (){
     $(document.querySelectorAll(".criarVagaBox")).hide()
@@ -247,3 +306,140 @@ $(document.querySelectorAll("#principalEmp")).click(function () {
 
 
 
+// REGEX
+let RegexEmail = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/); // Por algum motivo meus regex não funcionavam de jeito nenhum, então peguei um frankestein da internet e montei
+let RegexCPNJ = new RegExp(/^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/);
+let RegexCPF = new RegExp(/^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}))$/);
+let RegexCep = new RegExp(/^([\d]{2})\.*([\d]{3})-*([\d]{3})/)
+let RegexTelefone = new RegExp(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/)
+let RegexLinkedin = new RegExp (/((http(s?):\/\/)*([a-zA-Z0-9\-])*\.|[linkedin])[linkedin\/~\-]+\.[a-zA-Z0-9\/~\-_,&=\?\.;]+[^\.,\s<]/)
+
+// VALIDADORES EMPRESA REGISTRO
+function checaNomeEmpresa() {
+    let nomeDaEmpresa = $(document.querySelector('#nomeEmpresa')).val()
+    if (nomeDaEmpresa == "") {
+        window.alert("Empresa sem nome")
+        return  false
+    }
+    else {
+        return true
+    }
+}
+function checaSenhaEmpresa() {
+    let senhaDaEmpresa = $(document.querySelector('#senhaEmpresa')).val()
+    if (senhaDaEmpresa == "") {
+        window.alert("Senha vazia")
+        return  false
+    }
+    else {
+        return true
+    }
+}
+function checaEmail() {
+    let emailEmpresa = $(document.querySelector('#emailEmpresa')).val() as string
+    return RegexEmail.test(emailEmpresa);
+}
+
+function checaCPNJ() {
+    let CPNJEmpresa = $(document.querySelector('#cnpjEmpresa')).val() as string
+
+    return RegexCPNJ.test(CPNJEmpresa);
+}
+function checaCEP() {
+    let cepEmpresa = $(document.querySelector('#cepEmpresa')).val() as string
+
+    return RegexCep.test(cepEmpresa);
+}
+
+
+// VALIDADOR CANDIDATO REGISTRO
+function checaEmailCand() {
+    let emailCand = $(document.querySelector('#emailCand')).val() as string
+    return RegexEmail.test(emailCand);
+}
+function checaCpf() {
+    let cpfCand = $(document.querySelector('#cpfCand')).val() as string
+    return RegexCPF.test(cpfCand);
+
+}
+function checaTelefone() {
+    let telefoneCand = $(document.querySelector('#telefoneCand')).val() as string
+    return RegexTelefone.test(telefoneCand)
+
+}
+function  checaLink() {
+    let linkCand = $(document.querySelector('#linkedinCand')).val() as string
+    return RegexLinkedin.test(linkCand)
+}
+
+//Login Empresa
+function  loginEmpresa() {
+    let loginEmpresa = $(document.querySelector("#loginEmpresa")).val() as string
+    let senhaEmpresa = $(document.querySelector('#senhaLoginEmpresa')).val() as string
+    if (loginEmpresa == "") {
+        window.alert("Login Vazio")
+        return false
+    }
+    if (senhaEmpresa == "") {
+        window.alert("Senha vazia")
+        return false
+    }
+    if (RegexEmail.test(loginEmpresa)){
+        return true
+    }else {
+        window.alert("Login Inválido")
+        return false
+    }
+}
+
+//Login Candidato
+function checaNomeCandidato(){
+    let nomeDaCandidato = $(document.querySelector('#nomeCand')).val()
+    if (nomeDaCandidato == "") {
+        window.alert("Candidato sem nome")
+        return  false
+    }
+    else {
+        return true
+    }
+}
+function checaSenhaCandidato(){
+    let Senhadocandidato = $(document.querySelector('#senhaCand')).val()
+    if (Senhadocandidato == "") {
+        window.alert("Candidato sem senha")
+        return  false
+    }
+    else {
+        return true
+    }
+}
+function  loginCandidato() {
+    let loginCandidato = $(document.querySelector("#loginCandidato")).val() as string
+    let senhaCandidato = $(document.querySelector('#SenhaLoginCandidato')).val() as string
+    if (loginCandidato == "") {
+        window.alert("Login Vazio")
+        return false
+    }
+    if (senhaCandidato == "") {
+        window.alert("Senha vazia")
+        return false
+    }
+    if (RegexEmail.test(loginCandidato)) {
+        return true
+    }else {
+        window.alert("Login inválido")
+        return false
+    }
+}
+
+// Campos vazios
+function registroDeVaga() {
+    let nomeDaVaga = $(document.querySelector('.nomeDaVaga')).val()
+    if (nomeDaVaga == "") {
+        window.alert("Vaga sem nome")
+        return  false
+    }
+    else {
+        return true
+    }
+}
