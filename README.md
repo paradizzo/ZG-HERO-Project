@@ -47,7 +47,7 @@ As imagens usadas são meramente ilustrativas, o nome que você colocar na sua e
 
 Nenhum bug foi corrigido ou descoberto durante essa fase, uma criação de banco de dados foi feita apenas.
 Segue abaixo uma imagem representativa do banco de dados: 
-![alt text](github.com/paradizzo/ZG-HERO-Project/tree/master/BancoDeDados)
+![alt text](ZG-HERO-Project/tree/master/BancoDeDados)
 
 
 
