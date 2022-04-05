@@ -43,7 +43,7 @@ As imagens usadas são meramente ilustrativas, o nome que você colocar na sua e
 - Gráfico de barras funcional
 
 
-#Criação do banco de dados
+# Criação do banco de dados
 
 Nenhum bug foi corrigido ou descoberto durante essa fase, uma criação de banco de dados foi feita apenas.
 Segue abaixo uma imagem representativa do banco de dados: 
