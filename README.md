@@ -50,6 +50,11 @@ Segue abaixo uma imagem representativa do banco de dados:
 ![Linketinder](https://user-images.githubusercontent.com/80402261/161648325-34355588-267d-4b1a-b8cb-8ab9339c8727.png)
 
 
+# Atualização no banco de dados e no backend
+
+Estou deixando a pasta LINKETINDER só para efeitos de comparação, eu refiz o código do Linketinder e renomeei para LinketinderREBORN, refiz o código de um jeito légivel, o outro código estava simplesmente INUTILIZAVEL. 
+Atualmente o código é um exo esqueleto ( Não possui regex, testes unitarios, etc... ) mas agora é um código funcional para integração com banco de dados. 
+Por questões de tempo não coloquei essas features/não-remoção-de-bugs; Na proxima trilha estarei modelando e tornando esse código menos desajeitado. 
 
 
 
