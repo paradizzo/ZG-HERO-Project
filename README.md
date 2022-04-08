@@ -56,5 +56,7 @@ Estou deixando a pasta LINKETINDER só para efeitos de comparação, eu refiz o 
 Atualmente o código é um exo esqueleto ( Não possui regex, testes unitarios, etc... ) mas agora é um código funcional para integração com banco de dados. 
 Por questões de tempo não coloquei essas features/não-remoção-de-bugs; Na proxima trilha estarei modelando e tornando esse código menos desajeitado. 
 
+# Adição do Gradle no LinketinderREBORN (?)
 
+Gradle adicionado, não se da maneira correta, mas foi adicionado. 
 
