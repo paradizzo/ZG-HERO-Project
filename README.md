@@ -80,5 +80,8 @@ Por questões de tempo e outras dificuldades que também serão sanadas na próx
 - Adição de tratamento de erros
 - Alguns ajustes no Gradle que SISMAVAM em dar erro
 
+Segue támbem a foto do esquema do banco de dados:
+![Linketinder](https://user-images.githubusercontent.com/80402261/166125840-d81eaba4-884a-42b1-ba15-2d71252af8f2.png)
+
 
 Fique atento pras próximas semanas, onde irei upar e conectar esse novo backend com o front end com sua própria identidade visual.
