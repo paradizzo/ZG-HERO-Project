@@ -85,3 +85,7 @@ Segue támbem a foto do esquema do banco de dados:
 
 
 Fique atento pras próximas semanas, onde irei upar e conectar esse novo backend com o front end com sua própria identidade visual.
+Vou deixar a logo aqui pra dar um gosto na boca 😋
+
+![logo-conjunta](https://user-images.githubusercontent.com/80402261/166125863-57d527b6-79fc-4cfd-abe5-bec01b0ef546.png)
+
