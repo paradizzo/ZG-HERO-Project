@@ -60,3 +60,25 @@ Por questões de tempo não coloquei essas features/não-remoção-de-bugs; Na p
 
 Gradle adicionado, não se da maneira correta, mas foi adicionado. 
 
+# Clean Code 
+Ok, aqui temos que colocar alguns pontos.
+A refatação do BackEnd do Linketinder já havia sido feita, o código anterior está ilegivel então antes mesmo da trilha começar eu já havia refatorado o mesmo.
+Dito isso, algumas pontas ficaram soltas, então ajeitei pequenos blocos de código, diminuindo linhas, retirando semicolons e booleans redundantes.
+Outro ponto de refatoração foi no próprio banco de dados, mas não no código. 
+O Banco de dados agora possui 2 tables, essas sendo: candidato_has_competencia e vagas_has_competencia, agora sim fazendo uma ligação N:N. 
+O grande problema foi como traduzir isso pro Backend, dúvida que será sanado na próxima segunda-feira. 
+Outra novidade que essa trilha trás é o spoiler do futuro projeto. O Job Cloud, já renomei o back end para CLOUD JOB por esse simples motivo. 
+Por questões de tempo e outras dificuldades que também serão sanadas na próxima segunda, é provavel que o front end tenha uma nova cara. 
+
+### Dito tudo isso, segue basicamente as diferenças:
+
+- Refatação COMPLETA do código 
+- Retirada de funções repetidas
+- Retirada de booleans redundantes
+- Um Main e um Utils, que é chamada do MAIN
+- Uma pequena refatoração no menu de itens
+- Adição de tratamento de erros
+- Alguns ajustes no Gradle que SISMAVAM em dar erro
+
+
+Fique atento pras próximas semanas, onde irei upar e conectar esse novo backend com o front end com sua própria identidade visual.
