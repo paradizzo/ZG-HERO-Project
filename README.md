@@ -60,7 +60,7 @@ Por questões de tempo não coloquei essas features/não-remoção-de-bugs; Na p
 
 Gradle adicionado, não se da maneira correta, mas foi adicionado. 
 
-# Clean Code 
+# Clean Code e Princípios SOLID
 Ok, aqui temos que colocar alguns pontos.
 A refatação do BackEnd do Linketinder já havia sido feita, o código anterior está ilegivel então antes mesmo da trilha começar eu já havia refatorado o mesmo.
 Dito isso, algumas pontas ficaram soltas, então ajeitei pequenos blocos de código, diminuindo linhas, retirando semicolons e booleans redundantes.
