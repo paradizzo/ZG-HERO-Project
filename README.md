@@ -106,3 +106,7 @@ Resolvi também usar a IDE ao meu favor em alguns casos, ao invés de usar, por 
 
 Gostaria de agradecer novamente ao Victor por ter me salvado essa semana.
 
+
+# Padrão MVC
+Pelo que eu entendi o trabalho era simples, dividir a aplicação para não deixar existir uma superclass. 
+O enunciado do problema diz que a view seria o front end, mas por questões  praticidade eu deixei o view como se fossem os menus do terminal. 
