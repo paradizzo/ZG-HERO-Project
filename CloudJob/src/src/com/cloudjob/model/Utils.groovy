@@ -1,133 +1,20 @@
-package src
+package com.cloudjob.model
 import java.sql.Connection
 import java.sql.Date
 import java.sql.DriverManager
 import java.sql.PreparedStatement
 import java.sql.ResultSet
 import java.text.SimpleDateFormat
+import com.cloudjob.connection.connection
 
 class Utils {
     static  Scanner teclado = new Scanner(System.in)
     static Scanner tecladoINT = new Scanner(System.in)
-
-    static Connection conexao() {
-        Properties props = new Properties()
-        props.setProperty("user", "postgres")
-        props.setProperty("password ", "paradizo123")
-        props.setProperty("ssl", "false")
-        String URL_SERVIDOR = "jdbc:postgresql://localhost:5432/linketinder?currentSchema=public&user=postgres&password=paradizo123"
-
-
-        try {
-            Class.forName("org.postgresql.Driver")
-            return DriverManager.getConnection(URL_SERVIDOR, props)
-
-        } catch (Exception e) {
-            e.printStackTrace()
-            if (e instanceof ClassNotFoundException) {
-                System.err.println("Verifique o driver de conexão")
-            } else {
-                System.err.println("Verifique se o servidor está ativo")
-            }
-            System.exit(-42)
-            return null
-        }
-
-    }
-
-    static void menuEmpresa() {
-        System.out.println("===== ABA DE EMPRESA =====")
-        System.out.println("1 - Registrar vaga ")
-        System.out.println("2 - Listar Candidatos ")
-        System.out.println("3 - Apagar vaga ")
-        System.out.println("4 - Atualizar vaga ")
-        System.out.println("5 - Retorno ")
-        System.out.println("=================== ")
-        int opcaoEmpresa = Integer.parseInt(teclado.nextLine())
-
-        if (opcaoEmpresa == 1) {
-            criaVaga()
-            menuEmpresa()
-        }
-        else  if (opcaoEmpresa == 2 ) {
-            listarCandidatos()
-            menuEmpresa()
-        }
-        else if (opcaoEmpresa == 3) {
-            apagarVaga()
-            menuEmpresa()
-        } else if (opcaoEmpresa == 5 ) {
-            menu()
-        }else if (opcaoEmpresa == 4 ) {
-            atualizarVaga()
-            menuEmpresa()
-        }
-        else  {
-            System.out.println("INSIRA UMA OPÇAO VALIDA")
-            menuEmpresa()
-        }
-    }
-
-    static void menuCandidato() {
-        System.out.println("====== ABA DE CANDIDATO ===== ")
-        System.out.println("1 - Listar Vagas ")
-        System.out.println("2 - Retorno  ")
-        int opcaoCandidato = Integer.parseInt(teclado.nextLine())
-        if ( opcaoCandidato == 1) {
-            listarVagas()
-            menuCandidato()
-        }
-        else  if (opcaoCandidato == 2) {
-            menu()
-            menuCandidato()
-        } else {
-            System.out.println("INSIRA UMA OPÇÃO VALIDA ")
-            menuCandidato()
-
-        }
-    }
-
-    static void menu() {
-        System.out.println(" ========= MENU DE OPÇÕES =========")
-        System.out.println("Selecione uma opção: ")
-        System.out.println("1 - Entrar como candidato ")
-        System.out.println("2 - Entrar como empresa ")
-        System.out.println("3 - Registrar candidatos ")
-        System.out.println("4 - Registrar empresas  ")
-        System.out.println("0 - Fechar programa  ")
-        int opcaoMenu = Integer.parseInt(teclado.nextLine())
-
-        if (opcaoMenu == 1) {
-            menuCandidato()
-
-        }
-        else if (opcaoMenu == 2) {
-            menuEmpresa()
-        }
-        else if (opcaoMenu == 3 ){
-            inserirCandidatos()
-            menu()
-        }
-        else if (opcaoMenu == 4) {
-            inserirEmpresas()
-            menu()
-        }else if(opcaoMenu == 0 ) {
-            System.exit(-42)
-
-        }
-        else  {
-            System.out.println("INSIRA UMA OPÇÃO VALIDA")
-            menu()
-        }
-    }
-
-
-
     static void listarCompetencias(int ULTIMO_ID_INT , String callerString) {
         String BUSCAR_COMPETENCIAS = "SELECT * FROM competencias"
         String INSERIR_CANDIDATOS_HAS_COMPETENCIAS = callerString
         try {
-            Connection conn = conexao()
+            Connection conn = connection.conexao()
             PreparedStatement competencias = conn.prepareStatement(BUSCAR_COMPETENCIAS, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
             PreparedStatement salvarCandidatoHasCompetencias = conn.prepareStatement(INSERIR_CANDIDATOS_HAS_COMPETENCIAS)
             ResultSet resCompetencia = competencias.executeQuery()
@@ -192,7 +79,7 @@ class Utils {
     static void listarCandidatos() {
         String BUSCAR_CANDIDATOS = "SELECT * FROM candidatos"
         try {
-            Connection conn = conexao()
+            Connection conn = connection.conexao()
             PreparedStatement candidatos = conn.prepareStatement(BUSCAR_CANDIDATOS, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
             ResultSet resCandidato = candidatos.executeQuery()
             resCandidato.last()
@@ -244,7 +131,7 @@ class Utils {
         String INSERIR_CANDIDATOS = "INSERT INTO candidatos(nome, sobrenome, data_de_nascimento, email, cpf, pais, cep, descricao, senha) VALUES(?,?,?,?,?,?,?,?,?) "
         ArrayList arrayCompetencias = []
         try {
-            Connection conn = conexao();
+            Connection conn = connection.conexao();
             PreparedStatement salvarCandidato = conn.prepareStatement(INSERIR_CANDIDATOS)
             salvarCandidato.setString(1,nomeCandidato)
             salvarCandidato.setString(2,sobrenomeCandidato)
@@ -324,7 +211,7 @@ class Utils {
 
         String INSERIR_EMPRESAS = "INSERT INTO empresas(nome, email, cnpj, pais, cep, senha) VALUES(?,?,?,?,?,?)"
         try {
-            Connection conn = conexao();
+            Connection conn = connection.conexao();
 
             PreparedStatement salvarEmpresa = conn.prepareStatement(INSERIR_EMPRESAS)
             salvarEmpresa.setString(1,nomeEmpresa)
@@ -362,7 +249,7 @@ class Utils {
         String INSERIR_VAGAS = "INSERT INTO vagas(nome, descricao, estado, cidade, id_empresas) VALUES(?,?,?,?,?)"
         ArrayList arrayCompetencias = []
         try {
-            Connection conn = conexao();
+            Connection conn = connection.conexao();
 
             PreparedStatement salvarVaga = conn.prepareStatement(INSERIR_VAGAS)
             salvarVaga.setString(1,nomeVaga)
@@ -419,7 +306,7 @@ class Utils {
     static void listarVagas() {
         String BUSCAR_VAGAS = "SELECT * FROM vagas"
         try {
-            Connection conn = conexao()
+            Connection conn = connection.conexao()
             PreparedStatement vagas = conn.prepareStatement(BUSCAR_VAGAS, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
             ResultSet resVagas = vagas.executeQuery()
             resVagas.last()
@@ -450,7 +337,7 @@ class Utils {
     static void listarEmpresas() {
         String BUSCAR_EMPRESAS = "SELECT * FROM empresas"
         try {
-            Connection conn = conexao()
+            Connection conn = connection.conexao()
             PreparedStatement empresas = conn.prepareStatement(BUSCAR_EMPRESAS, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
             ResultSet resEmpresas = empresas.executeQuery()
             resEmpresas.last()
@@ -484,7 +371,7 @@ class Utils {
         int idVaga = tecladoINT.nextInt()
         String DELETAR_PARENTES = "DELETE  FROM vagas_has_competencias WHERE vagas_id = ${idVaga}"
         try {
-            Connection conn = conexao()
+            Connection conn = connection.conexao()
             PreparedStatement vagas = conn.prepareStatement(BUSCA_ID_VAGA,ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
             PreparedStatement deletarParente = conn.prepareStatement(DELETAR_PARENTES)
             vagas.setInt(1, idVaga)
@@ -521,7 +408,7 @@ class Utils {
         String DELETAR_PARENTES = "DELETE  FROM vagas_has_competencias WHERE vagas_id = ${idVaga}"
         ArrayList arrayCompetencias = []
         try{
-            Connection conn = conexao()
+            Connection conn = connection.conexao()
             PreparedStatement vaga = conn.prepareStatement(BUSCAR_ID_VAGA, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
             vaga.setInt(1, idEmpresa)
             ResultSet resVaga = vaga.executeQuery()
