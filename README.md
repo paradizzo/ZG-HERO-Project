@@ -133,3 +133,15 @@ Outro ponto a se dizer é que você não pode enviar campos vazios, eu desabilit
 Basicamente o site inteiro, pode ter sido uma decisão ruim mas eu não aguentava olhar pro design daquele site antigo, estava MUITO feio e com os forms todos errados e mal feitos.  <br />
 O site todo é responsivo, dá uma olhada ai!  <br /> 
 Vou adicionar umas fotos comparativas aqui e é isso, até semana que vem, OU ANTES... 
+
+### Comparativos
+- Antigo
+![logo_feia](https://user-images.githubusercontent.com/80402261/170729884-1cb689e5-e7c0-4508-ba43-a16b6061bb7f.png)
+![landingpage_feia](https://user-images.githubusercontent.com/80402261/170729828-6d358235-2ca0-407b-b948-f84e5fae2e32.png)
+![registro_feio](https://user-images.githubusercontent.com/80402261/170729943-f69ff6db-7c86-4afa-9706-44eb3ac2bfe5.png)
+
+- Novo 
+![logo-conjunta](https://user-images.githubusercontent.com/80402261/170730060-34583d01-cfb0-41e3-aec6-d786809ca4ee.png)
+![landing_page_bonita_cel](https://user-images.githubusercontent.com/80402261/170730103-68a8fb36-999d-4197-880a-a484fd41ca96.png)
+![login-cel-bonito](https://user-images.githubusercontent.com/80402261/170730126-2dee275f-501a-40f2-8ef9-a4b8910e16f1.png)
+![registro-cel-bonito](https://user-images.githubusercontent.com/80402261/170730145-a8e9be2a-6c51-41ed-8680-988ef517ca05.png)
