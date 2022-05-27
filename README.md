@@ -145,5 +145,4 @@ Vou adicionar umas fotos comparativas aqui e é isso, até semana que vem, OU AN
 - Novo 
 ![logo-conjunta](https://user-images.githubusercontent.com/80402261/170730060-34583d01-cfb0-41e3-aec6-d786809ca4ee.png)
 ![landing_page_bonita_cel](https://user-images.githubusercontent.com/80402261/170730103-68a8fb36-999d-4197-880a-a484fd41ca96.png)
-![login-cel-bonito](https://user-images.githubusercontent.com/80402261/170730126-2dee275f-501a-40f2-8ef9-a4b8910e16f1.png)
 ![registro-cel-bonito](https://user-images.githubusercontent.com/80402261/170730145-a8e9be2a-6c51-41ed-8680-988ef517ca05.png)
