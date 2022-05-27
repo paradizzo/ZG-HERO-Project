@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    text-decoration: none;
+}
+body {
+    padding: 0 0 10vh 0;
+    background:url("../../../Cadastro/CadastroCandidato/images/bg-stars.svg"), black;
+}
+/* Nav  bar */
+.logo-header {
+    width: 13ch;
+}
+.register-vaga-section {
+    padding: 2ch 2ch;
+    color: #e1e1e1;
+}
+.innerNavBar {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 2ch 2ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* callout section */
+.callout-section {
+    padding: 18ch 2ch 5ch;
+    color: #e1e1e1;
+}
+.callout-principal {
+    margin: 2ch 0 1ch;
+}
+.returt-to-login-box {
+    margin-top: 1ch;
+    text-align: left;
+}
+.return-to-login {
+    color: #6c33a3;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: .7;
+}
+.login-box {
+    background-color: rgb(32, 32, 36);
+    border-radius: 1ch;
+    padding: 1ch 2ch 2ch;
+    margin: 3ch 0 0 ;
+}
+
+.register-wraper {
+    text-align: center;
+    position: relative;
+    margin: 3ch 0;
+}
+.register-wraper input:not([type="date"]){
+    margin: 0 0 1.5ch;
+    padding: 2ch;
+    width: 100%;
+    background-color: #000000;
+    border: none;
+    border-radius: 1ch;
+    color: #e1e1e1;
+    font-size: 16px;
+}
+.register-wraper input::placeholder {
+    font-size: 16px;
+    padding-left: 1.5ch;
+}
+.register-wraper input:focus {
+    outline: 2px solid #6c33a3;
+}
+
+
+.toggleEmpresaeCandidato {
+    margin: 2ch 0 ;
+    display: flex;
+    justify-content: space-evenly;
+}
+.toggle-empresa, .toggle-candidato {
+    color: white;
+    opacity: 50%;
+    letter-spacing: 1px;
+}
+#form-register-empresa {
+    display: none;
+}
+.button-login-loginScreen {
+    background-color: #6c33a3;
+    border: none;
+    padding: 2ch 3ch;
+    width: 100%;
+    font-weight: 700;
+    border-radius: 2ch;
+    letter-spacing: 2px;
+    color: white;
+    opacity: 60%;
+}
+.toggle-empresa.focus, .toggle-candidato.focus {
+    border-bottom: 2px solid #6c33a3;
+    opacity: 1;
+}
+/* Checkbox */
+
+.container{
+    display: flex;
+}
+
+input[type="checkbox"]{
+    display:none;
+}
+
+input[type="checkbox"]:hover + label:before{
+    opacity: .5;
+}
+
+.checkbox{
+    display:inline-block;
+    position:relative;
+    padding-left:40px;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #111;
+    font-weight: 600;
+    width: 10ch;
+}
+
+.checkbox:before{
+    z-index:15;
+    content: '';
+    position:absolute;
+    left:0;
+    top: 6px;
+    transition:all 0.3s ease;
+    cursor:pointer;
+    width:20px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #444;
+    height:20px;
+}
+input[type="checkbox"]:checked + label{
+    color: #a2a2a2;
+}
+
+input[type="checkbox"]:checked +  label:before{
+    border-color: transparent;
+    border-left-color: #6c33a3;
+    border-bottom-color: #6c33a3;
+    transform:rotate(-50deg);
+    width:22px;
+    height:12px;
+    top: 3px;
+}
+.emailESenhaBox {
+    background-color: rgb(32, 32, 36);
+    border-radius: 1ch;
+    padding: 1ch 2ch 2ch;
+    margin: 3ch 0 0 ;
+}
+/* Hover */
+
+.return-to-login:hover {
+    opacity: 1;
+}
+.button-login-loginScreen:hover{
+    opacity: 1;
+}
+
+.logo-header-large {
+    display: none;
+}
+@media only screen and (min-width: 900px) {
+    .register-vaga-section {
+        width: 30%;
+    }
+    .callout-section {
+        width: 30%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 15ch 0;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        padding: 2% 5%;
+    }
+    header {
+        display: none;
+    }
+    .logo-header-large{
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        margin: 0;
+    }
+    .emailESenhaBox {
+        max-width: 540px ;
+        margin: 0 auto;
+    }
+}

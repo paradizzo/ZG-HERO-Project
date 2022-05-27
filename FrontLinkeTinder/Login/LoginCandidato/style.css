@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    text-decoration: none;
+}
+body {
+    padding: 0 0 10vh 0;
+    background:url("images/bg-stars.svg"), black;
+}
+/* Nav  bar */
+.logo-header {
+    width: 13ch;
+}
+.catch-phrase-large, #login-button-empresa {
+    display: none;
+}
+.logo-header-large {
+    display: none;
+}
+.innerNavBar {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 2ch 2ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/* Register */
+
+.toggleEmpresaeCandidato {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1ch 0 0 0;
+    margin: 1ch 0;
+}
+.toggle-candidato, .toggle-empresa {
+    color: white;
+}
+.register-section {
+    padding: 18ch 2ch 5ch;
+    color: #e1e1e1;
+}
+.catch-phrase {
+    text-align: center;
+}
+.login-box {
+    background-color: rgb(32, 32, 36);
+    border-radius: 1ch;
+    padding: 1ch 2ch 2ch;
+    margin: 3ch 0 0 ;
+}
+#form-login-empresa {
+    display: none;
+}
+.login-wraper {
+    text-align: center;
+    position: relative;
+}
+.login-wraper input {
+    margin: 0 0 1.5ch;
+    padding: 2ch;
+    width: 100%;
+    background-color: #000000;
+    border: none;
+    border-radius: 1ch;
+    color: #e1e1e1;
+    font-size: 16px;
+}
+.login-wraper input::placeholder {
+    font-size: 16px;
+    padding-left: 1.5ch;
+}
+.login-wraper input:focus {
+    outline: 2px solid #6c33a3;
+}
+.esqueciMinhaSenha{
+    color: #6c33a3;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin-left: .5ch;
+}
+.submit-button-box {
+    text-align: center;
+    margin: 5ch ;
+}
+.button-login-loginScreen {
+    background-color: #6c33a3;
+    border: none;
+    padding: 2ch 3ch;
+    width: 100%;
+    font-weight: 700;
+    border-radius: 2ch;
+    letter-spacing: 2px;
+    color: white;
+    opacity: 60%;
+}
+.registerBox {
+    margin: 2ch 0 0;
+}
+.no-account-link {
+    color: #6c33a3;
+}
+/* Social media */
+.social-media-wraper {
+    padding: 0 2ch 2ch;
+    text-align: center;
+}
+.fa-github, .fa-linkedin {
+    margin: 0 1ch;
+}
+/* Hovers and focus*/
+.button-login-loginScreen:hover, .button-login-loginScreen:focus {
+    opacity: 1;
+}
+.fa-linkedin:hover, .fa-github:hover, .fa-github:focus, .fa-linkedin:focus {
+    color: white;
+}
+.no-account-link:hover, .no-account-link:focus , .esqueciMinhaSenha:hover, .esqueciMinhaSenha:focus{
+    color: white;
+}
+.toggle-empresa.focus, .toggle-candidato.focus {
+    border-bottom: 2px solid #6c33a3;
+}
+/* Media queries */
+@media only screen and (min-width: 900px) {
+    .logo-header {
+        display: none;
+    }
+
+    .logo-header-large {
+        display: block;
+        max-width: 100ch;
+        width: 25ch;
+    }
+    body {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 0 32vh 0;
+    }
+    .innerNavBar {
+        position: relative;
+    }
+    .social-media-box {
+        display: none;
+    }
+    header {
+        align-self: center;
+    }
+    .register-section {
+        width: 50%;
+    }
+    .catch-phrase {
+        display: none;
+    }
+    .catch-phrase-large {
+        display: block;
+        color: #bbbbbb;
+        padding: 2ch;
+        letter-spacing: 1px;
+        font-size: 35px;
+    }
+    .login-box {
+        margin: 0;
+        padding: 5ch;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    body {
+        justify-content: center;
+        padding: 5vh 0 0;
+    }
+    .register-section {
+        max-width: 500px;
+    }
+    .login-box {
+        max-width: 450px;
+    }
+    .register-section {
+        margin: 0 0 0 3ch;
+    }
+    .logo-header-large {
+        max-width: 50ch;
+        width: 40ch;
+    }
+    .catch-phrase-large {
+        font-size: 50px;
+        padding: 0;
+        text-align: center;
+    }
+}

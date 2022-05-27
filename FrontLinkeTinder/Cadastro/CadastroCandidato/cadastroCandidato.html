@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e5b938a9a.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="innerNavBar">
+            <img src="../../images/logo.png" alt="" class="logo-header">
+        </div>
+    </div>
+</header>
+
+<section class="callout-section">
+    <div class="callout-text-box">
+        <img src="../../images/logo-conjunta.png" alt="" class="logo-header-large">
+        <h1 class="callout-principal">Já são mais de 400 clouders conectados.</h1>
+        <p class="callout-sub-text">Junta-se a nós e aumente suas chances no mercado de trabalho</p>
+    </div>
+    <div class="returt-to-login-box">
+        <a href="../../Login/LoginCandidato/loginCandidato.html" class="return-to-login">Retornar ao login</a>
+    </div>
+</section>
+
+<section class="register-section">
+    <div class="login-box">
+        <div class="toggleEmpresaeCandidato">
+            <a href="#" class="toggle-candidato focus" autofocus>Candidato</a>
+            <a href="#" class="toggle-empresa">Empresa</a>
+        </div>
+        <div class="emailESenhaBox">
+            <form  id="form-register-candidato">
+                <div class="register-wraper">
+                    <label for="nomeSobrenome"></label>
+                    <input type="text" id="nomeSobrenome" name="nomeSobrenome" placeholder="Nome" >
+                    <p class="error" id="error-nome">Insira um valor válido <img src="images/error-icon.png" alt=""></p>
+                    <label for="dataDeNascimento"></label><br>
+                    <input type="date" id="dataDeNascimento" name="dataDeNascimento" placeholder="dataDeNascimento">
+                    <label for="email"></label><br>
+                    <input type="email" id="email" name="email" placeholder="E-mail">
+                    <p class="error" id="error-email">Insira um email válido <img src="images/error-icon.png" alt=""></p>
+                    <label for="CPF"></label><br>
+                    <input type="text" id="CPF" name="CPF" placeholder="CPF" pattern="[0-9]+" maxlength="11" minlength="11">
+                    <p class="error" id="error-cpf">CPF inserido ultrapassa 11 digitos<img src="images/error-icon.png" alt=""></p>
+                    <label for="pais"></label><br>
+                    <input type="text" id="pais" name="pais" placeholder="Pais">
+                    <p class="error" id="error-pais">Insira um valor válido <img src="images/error-icon.png" alt=""></p>
+                    <label for="formacao"></label>
+                    <input type="text" id="formacao" name="formacao" placeholder="Formação">
+                    <p class="error" id="error-formacao">Insira um valor válido <img src="images/error-icon.png" alt=""></p>
+                    <label for="descricaoCandidato"></label><br>
+                    <input type="text" id="descricaoCandidato" name="descricaoCandidato" placeholder="Descrição">
+                    <p class="error" id="error-descricao">Insira um valor válido <img src="images/error-icon.png" alt=""></p>
+                    <label for="cep"></label><br>
+                    <input type="text" id="cep" name="cep" placeholder="CEP" pattern="[0-9]+">
+                    <p class="error" id="error-cep">Insira um valor válido <img src="images/error-icon.png" alt=""></p>
+                    <label for="password"></label><br>
+                    <input type="password" id="password" name="password" placeholder="Senha" minlength="6">
+                    <p class="error" id="error-password">Insira um valor válido <img src="images/error-icon.png" alt=""></p>
+                    <input type="hidden" name="trigger" value=2 class="trigger">
+                    <div class="container">
+                        <div class="form-container">
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="angular" id="angular"/>
+                                <label class="checkbox" for="angular">Angular</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox"  name="java" id="java"/>
+                                <label class="checkbox" for="java">Java</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="groovy" id="groovy"/>
+                                <label class="checkbox" for="groovy">Groovy</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="python" id="python"/>
+                                <label class="checkbox" for="python">Python</label>
+                            </div>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="typescript" id="typescript"/>
+                                <label class="checkbox" for="typescript">Typescript</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="emailESenhaBox">
+            <form id="form-register-empresa">
+                <div class="register-wraper">
+                    <label for="nomeSobrenome-empresa"></label>
+                    <input type="text" id="nomeSobrenome-empresa" name="nomeSobrenomeEmpresa" placeholder="Nome">
+                    <label for="email-empresa"></label><br>
+                    <input type="email" id="email-empresa" name="emailEmpresa" placeholder="E-mail">
+                    <label for="CNPJ"></label><br>
+                    <input type="text" id="CNPJ" name="CNPJ" placeholder="CNPJ" pattern="[0-9]+" maxlength="14" minlength="14" >
+                    <label for="pais-empresa"></label><br>
+                    <input type="text" id="pais-empresa" name="paisEmpresa" placeholder="País">
+                    <label for="cep-empresa"></label><br>
+                    <input type="text" id="cep-empresa" name="CEPempresa" placeholder="CEP" pattern="[0-9]+">
+                    <label for="descricao-empresa"></label><br>
+                    <input type="text" id="descricao-empresa" name="descricaoEmpresa" placeholder="Descrição">
+                    <label for="password-empresa"></label><br>
+                    <input type="password" id="password-empresa" name="passwordEmpresa" placeholder="Senha" minlength="6">
+                    <input type="hidden" name="trigger" value=1 class="trigger-empresa">
+                </div>
+            </form>
+        </div>
+        <div class="submit-button-box">
+            <button type="submit" form="form-register-candidato" value="ENTRAR" class="button-login-loginScreen" id="login-button-candidato" >CADASTRAR</button>
+        </div>
+        <div class="submit-button-box">
+            <button type="submit" form="form-register-empresa" value="ENTRAR" class="button-login-loginScreen" id="login-button-empresa" >CADASTRAR</button>
+        </div>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="script.js"></script>
+<script type="text/javascript" src="jquery.serializejson.js"></script>
+
+</body>
+</html>

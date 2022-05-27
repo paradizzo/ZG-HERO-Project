@@ -10,6 +10,7 @@ import com.cloudjob.connection.connection
 class Utils {
     static  Scanner teclado = new Scanner(System.in)
     static Scanner tecladoINT = new Scanner(System.in)
+
     static void listarCompetencias(int ULTIMO_ID_INT , String callerString) {
         String BUSCAR_COMPETENCIAS = "SELECT * FROM competencias"
         String INSERIR_CANDIDATOS_HAS_COMPETENCIAS = callerString

@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    text-decoration: none;
+}
+body {
+    padding: 0 0 10vh 0;
+    background:url("../../Cadastro/CadastroCandidato/images/bg-stars.svg"), black;
+}
+body img {
+    max-width: 13ch;
+}
+/* header */
+.logo-header-large , .descricao-candidato{
+    display: none;
+}
+.navbar {
+    padding: 2ch;
+}
+header {
+    text-align: center;
+}
+#menu__toggle {
+    opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+}
+.menu__btn {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+.menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+
+/* Feed box */
+.feed-section {
+    padding: 2ch;
+}
+.feed-box {
+    background-color: rgb(32, 32, 36);
+    color: #a2a2a2;
+    border-radius: 1ch;
+}
+.feed-box h2 {
+    text-align: center;
+    padding: 1ch;
+    border-bottom: 3px solid #BC13FE49;
+}
+.feed-candidato-descricao-box {
+    padding: 2ch;
+    border-top: 20px solid black;
+}
+.candidato {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem rgb(188 19 254 / 29%), 0 0 0.8rem rgb(188 19 254 / 29%), 0 0 2.8rem rgb(188 19 254 / 29%), inset 0 0 1.3rem rgb(188 19 254 / 29%);
+    padding: 1.5ch;
+    margin-bottom: 3ch;
+    border-radius: 2ch;
+}
+.descricao-candidato-box {
+    display: none;
+}
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1ch 0;
+}
+.skills {
+    padding: 0.5ch 1ch;
+    background-color: #969696;
+    border-radius: 3ch;
+    letter-spacing: 1px;
+    margin: 0.5ch 0.5ch;
+    color: black;
+}
+.atributos-candidato {
+    display: flex;
+    flex-direction: column;
+    margin: 1ch 0 0;
+}
+.atributos-candidato span i{
+    margin: 0 0.7ch 0 0;
+}
+
+/* Info bracket */
+.info-bracket {
+    padding: 2ch;
+}
+.bracket-box {
+    display: flex;
+    max-width: 60ch;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    color:#a2a2a2 ;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem rgb(188 19 254 / 29%), 0 0 0.8rem rgb(188 19 254 / 29%), 0 0 2.8rem rgb(188 19 254 / 29%), inset 0 0 1.3rem rgb(188 19 254 / 29%);
+    padding: 2ch;
+    border-radius: 2ch;
+}
+.bracket-skills {
+    margin: 1ch ;
+    min-width: 20ch;
+    text-align: center;
+}
+.progressbar {
+    position: relative;
+    max-width: 100px;
+    margin: 10px auto 10px;
+    height: 30px;
+    background: rgba(108, 51, 163, 0.33);
+    overflow: hidden;
+    border-radius: 5ch;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem rgb(188 19 254 / 29%), 0 0 0.8rem rgb(188 19 254 / 29%), 0 0 2.8rem rgb(188 19 254 / 29%), inset 0 0 1.3rem rgb(188 19 254 / 29%);
+}
+.info-bracket h1 {
+    text-align: center;
+    margin: 2ch 0 1ch 0;
+    color: #a2a2a2;
+}
+
+span.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: #6c33a3;
+    transition: all .3s;
+}
+/* Card */
+.profile-card-box {
+    padding: 2ch;
+}
+.card {
+    height: auto;
+    width: 20rem;
+    max-width: 100%;
+    background-color: transparent;
+    margin: 0 auto;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem rgb(188 19 254 / 29%), 0 0 0.8rem rgb(188 19 254 / 29%), 0 0 2.8rem rgb(188 19 254 / 29%), inset 0 0 1.3rem rgb(188 19 254 / 29%);
+    border-radius: 2ch;
+}
+.card_profile_img {
+    max-height: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 16px;
+}
+.card_profile_img > img {
+    position: relative;
+    height: 150px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 150px;
+    border-radius: 100px;
+    box-shadow: 0 25px 2rem rgba(0, 0, 0, 0.15);
+}
+.card_content {
+    padding: 16px;
+    text-align: center;
+}
+.card_content  h3 {
+    color: #6c33a3 ;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.card_content  span {
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: #777;
+    text-transform: uppercase;
+
+}
+.card_content  p {
+    text-align: justify;
+    color: #a2a2a2;
+    margin: 2ch 0 0 0;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .feed-box {
+        max-width: 60ch;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .logo-header {
+        display: none;
+    }
+    .logo-header-large {
+        display: block;
+        max-width: 30ch;
+        margin: 0 auto;
+    }
+    .descricao-candidato-box {
+        display: block;
+        max-width: 40%;
+        padding: 2ch 4ch;
+        max-height: 30ch;
+        box-shadow:  0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem rgb(188 19 254 / 29%), 0 0 0.8rem rgb(188 19 254 / 29%), 0 0 2.8rem rgb(188 19 254 / 29%), inset 0 0 1.3rem rgb(188 19 254 / 29%);
+        border-radius: 2ch;
+        margin: 0 0 0 2ch;
+    }
+    .feed-candidato-descricao-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .formacao-candidato-descricao {
+        margin: 0 0 1ch 0;
+    }
+}
+@media only screen and (min-width: 1350px) {
+    .hero {
+        display: flex;
+        padding: 2ch;
+        justify-content: center;
+    }
+    .bracket-box {
+        flex-direction: column;
+    }
+    .info-bracket h1 {
+        display: none;
+    }
+}
