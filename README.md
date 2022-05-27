@@ -136,6 +136,8 @@ Vou adicionar umas fotos comparativas aqui e é isso, até semana que vem, OU AN
 
 ### Comparativos
 - Antigo
+ <br />
+
 ![logo_feia](https://user-images.githubusercontent.com/80402261/170729884-1cb689e5-e7c0-4508-ba43-a16b6061bb7f.png)
 ![landingpage_feia](https://user-images.githubusercontent.com/80402261/170729828-6d358235-2ca0-407b-b948-f84e5fae2e32.png)
 ![registro_feio](https://user-images.githubusercontent.com/80402261/170729943-f69ff6db-7c86-4afa-9706-44eb3ac2bfe5.png)
