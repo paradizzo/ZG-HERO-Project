@@ -113,13 +113,14 @@ O enunciado do problema diz que a view seria o front end, mas por questões  pra
 
 # Webservices e Microservices
 
-Opa, tudo bom? To com umas novidades quentes aqui. 
-Essa semana foi a parte de integração de PELO MENOS o cadastro dos candidatos ou empresas, então decidi fazer um pouco mais que isso.
-Quando olhei pro meu View e vi aquela aberração eu decidi que gostaria de mudar alguns aspectos, visuais, forms e etc, então fiz uma refatoração do Front end, desenvolvi uma logo, dei uma identidade visual pro projeto e estruturei todos os forms e redirects para ser um site funcional, você pode abrir a landing page e fazer o caminho que um usuario faria. 
-Vamos ao de facto ponto da trilha, integração; A trilha tinha caráter exploratório, então tinhamos que procurar como fazer a integração sem frameworks e POR DEUS DO CÉU EU PROCUREI, mas nada que eu achava parecia interessante ou servir pro meu proposito, até que encontrei os servlets e foi PERFEITO.  Essa trilha teve em mim um efeito bastante de "disempowerment" em mim. Eu tentava muita coisa, e quase nada dava certo e eu tive que TENTAR, TENTAR e TENTAR, mas no fim tudo deu certo, enfim, não tenho muito o que falar da trilha a não ser o fato de que foi exaustante e divertido até ficar procurando soluções e vendo tutoriais, certamente  a outra parte divertida foi produzir o design e montar o site.
+Opa, tudo bom? To com umas novidades quentes aqui.  <br />
+Essa semana foi a parte de integração de PELO MENOS o cadastro dos candidatos ou empresas, então decidi fazer um pouco mais que isso. <br />
+Quando olhei pro meu View e vi aquela aberração eu decidi que gostaria de mudar alguns aspectos, visuais, forms e etc, então fiz uma refatoração do Front end, desenvolvi uma logo, dei uma identidade visual pro projeto e estruturei todos os forms e redirects para ser um site funcional, você pode abrir a landing page e fazer o caminho que um usuario faria.  <br />
+Vamos ao de facto ponto da trilha, integração; A trilha tinha caráter exploratório, então tinhamos que procurar como fazer a integração sem frameworks e POR DEUS DO CÉU EU PROCUREI, mas nada que eu achava parecia interessante ou servir pro meu proposito, até que encontrei os servlets e foi PERFEITO.  Essa trilha teve em mim um efeito bastante de "disempowerment". <br> 
+Eu tentava muita coisa, e quase nada dava certo e eu tive que TENTAR, TENTAR e TENTAR, mas no fim tudo deu certo, enfim, não tenho muito o que falar da trilha a não ser o fato de que foi exaustante e divertido até ficar procurando soluções e vendo tutoriais, certamente  a outra parte divertida foi produzir o design e montar o site. <br />
 
-Deixa eu explicar como eu fiz a integração:
-Primeiro eu abro um servlet via tomcat, esse servidor recebe os dados via POST do javascript usando ajax, pega os dados, verifica o Trigger, que é um input escondido, esse trigger pode SER 2 ou 1 , dependendo do valor do Trigger ele adiciona os dados no banco de dados do candidato ou da empresa. Simples, fácil e rápido.
+Deixa eu explicar como eu fiz a integração: <br />
+Primeiro eu abro um servlet via tomcat, esse servidor recebe os dados via POST do javascript usando ajax, pega os dados, verifica o Trigger, que é um input escondido, esse trigger pode SER 2 ou 1 , dependendo do valor do Trigger ele adiciona os dados no banco de dados do candidato ou da empresa. Simples, fácil e rápido. <br />
 Cabe dizer que usei o Maven também, o melhor tutorial usava Maven então é isso.
 Outro ponto a se dizer é que você não pode enviar campos vazios, eu desabilitei o botão de submit caso tenha algum campo vazio, deixei os campos de CEP, CPF e CNPJ com um max e min length e com um regex que só permite números e VOALÁ, você não pode colocar valores inválidos no campo.
 
@@ -129,6 +130,6 @@ Outro ponto a se dizer é que você não pode enviar campos vazios, eu desabilit
 - Feed de vagas e candidatos responsívo 
 
 ### O que tem que não foi pedido? 
-Basicamente o site inteiro, pode ter sido uma decisão ruim mas eu não aguentava olhar pro design daquele site antigo, estava MUITO feio e com os forms todos errados e mal feitos. 
-O site todo é responsivo, dá uma olhada ai! 
-Vou adicionar umas fotos comparativas aqui e é isso, até semana que vem, OU ANTES...
+Basicamente o site inteiro, pode ter sido uma decisão ruim mas eu não aguentava olhar pro design daquele site antigo, estava MUITO feio e com os forms todos errados e mal feitos.  <br />
+O site todo é responsivo, dá uma olhada ai!  <br /> 
+Vou adicionar umas fotos comparativas aqui e é isso, até semana que vem, OU ANTES... 
