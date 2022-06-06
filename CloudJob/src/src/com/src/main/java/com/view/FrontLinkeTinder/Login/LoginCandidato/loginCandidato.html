@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e5b938a9a.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="innerNavBar">
+            <img src="../../images/logo.png" alt="" class="logo-header">
+            <img src="../../images/logo-conjunta.png" alt="" class="logo-header-large">
+        </div>
+        <h2 class="catch-phrase-large">Faça login na nuvem</h2>
+    </div>
+</header>
+
+<section class="register-section">
+    <h1 class="catch-phrase">Faça login na nuvem</h1>
+    <div class="login-box">
+        <div class="toggleEmpresaeCandidato">
+            <a href="#" class="toggle-candidato focus" autofocus>Candidato</a>
+            <a href="#" class="toggle-empresa">Empresa</a>
+        </div>
+        <div class="emailESenhaBox">
+            <form action="../../Feed/feedCandidato/feedCandidato.html" method="get" id="form-login-candidato">
+                <div class="login-wraper">
+                    <label for="email"></label><br>
+                    <input type="email" id="email" name="email" placeholder="E-mail">
+                    <label for="password"></label><br>
+                    <input type="password" id="password" name="password" placeholder="Senha">
+                </div>
+                <a href="#" class="esqueciMinhaSenha">Esqueci minha senha</a>
+            </form>
+            <form action="../../Feed/feedEmpresa/feedEmpresa.html" method="get" id="form-login-empresa">
+                <div class="login-wraper">
+                    <label for="email-empresa"></label><br>
+                    <input type="email" id="email-empresa" name="email" placeholder="E-mail">
+                    <label for="password-empresa"></label><br>
+                    <input type="password" id="password-empresa" name="password" placeholder="Senha">
+                </div>
+                <a href="#" class="esqueciMinhaSenha">Esqueci minha senha</a>
+            </form>
+        </div>
+        <div class="submit-button-box">
+            <button type="submit" form="form-login-candidato" value="ENTRAR" class="button-login-loginScreen" id="login-button-candidato" >ENTRAR</button>
+        </div>
+        <div class="submit-button-box">
+            <button type="submit" form="form-login-empresa" value="ENTRAR" class="button-login-loginScreen" id="login-button-empresa">ENTRAR</button>
+        </div>
+    </div>
+    <div class="registerBox">
+        <p class="no-account-phrase">Ainda não tem conta? <a href="../../Cadastro/CadastroCandidato/cadastroCandidato.html" class="no-account-link">Se registre</a></p>
+    </div>
+</section>
+
+<section class="social-media-box">
+    <div class="social-media-list">
+        <ul class="social-media-wraper">
+            <a href="https://github.com/paradizzo"><i class="fa fa-brands fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/lucas-paradizo/"><i class="fa fa-brands fa-linkedin fa-2x"></i></a>
+        </ul>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

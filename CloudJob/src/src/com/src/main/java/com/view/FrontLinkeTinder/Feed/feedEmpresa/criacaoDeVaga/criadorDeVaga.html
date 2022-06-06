@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e5b938a9a.js" crossorigin="anonymous"></script>
+    <title>Criador de Vaga</title>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="innerNavBar">
+            <img src="../../../images/logo.png" alt="" class="logo-header">
+        </div>
+    </div>
+</header>
+
+<section class="callout-section">
+    <div class="callout-text-box">
+        <img src="../../../images/logo-conjunta.png" alt="" class="logo-header-large">
+        <h1 class="callout-principal">Faça chover na nuvem.</h1>
+        <p class="callout-sub-text">Encontre os melhores profissionais aqui.</p>
+    </div>
+    <div class="returt-to-login-box">
+        <a href="../feedEmpresa.html" class="return-to-login">Retornar ao feed</a>
+    </div>
+</section>
+
+<section class="register-vaga-section">
+    <div class="emailESenhaBox">
+        <form id="form-register-vaga">
+            <div class="register-wraper">
+                <label for="nomeVaga"></label>
+                <input type="text" id="nomeVaga" name="nomeVaga" placeholder="Nome da Vaga" required>
+                <label for="localVaga"></label><br>
+                <input type="text" id="localVaga" name="localVaga" placeholder="Cidade da vaga: EX: Vitoria" required>
+                <label for="estadoVaga"></label>
+                <input type="text" id="estadoVaga" name="EstadoVaga" placeholder="Estado da vaga: EX: ES" required minlength="2" maxlength="2">
+                <label for="salarioVaga"></label><br>
+                <input type="text" id="salarioVaga" name="salarioVaga" placeholder="Salário da vaga" required>
+                <label for="nivelVaga"></label><br>
+                <input type="text" id="nivelVaga" name="nivelVaga" placeholder="Nível da vaga">
+                <label for="outsideWorkVaga"></label><br>
+                <input type="text" id="outsideWorkVaga" name="outsideWorkVaga" placeholder="Aceita candidatos de fora? Sim ou Não" required pattern="^(?:Sim|Não)$">
+                <label for="descricaoVaga"></label><br>
+                <input type="text" id="descricaoVaga" name="descricaoVaga" placeholder="Descricão da vaga" required>
+                <div class="container">
+                    <div class="form-container">
+                        <div class="checkbox-container">
+                            <input type="checkbox"  class="checkbox-value" id="angular" form="form-register-vaga"/>
+                            <label class="checkbox" for="angular" >Angular</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox-value" id="java" form="form-register-vaga"/>
+                            <label class="checkbox" for="java">Java</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox-value" id="groovy" form="form-register-vaga"/>
+                            <label class="checkbox" for="groovy">Groovy</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox-value" id="python" form="form-register-vaga"/>
+                            <label class="checkbox" for="python">Python</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox-value" id="typescript" form="form-register-vaga"/>
+                            <label class="checkbox" for="typescript">Typescript</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="submit-button-box">
+            <button type="submit" form="form-register-vaga" value="ENTRAR" class="button-login-loginScreen" id="login-button-candidato">CADASTRAR</button>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script  type="module" src="./script.js"></script>
+</body>
+</html>
