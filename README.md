@@ -146,3 +146,16 @@ Vou adicionar umas fotos comparativas aqui e é isso, até semana que vem, OU AN
 ![logo-conjunta](https://user-images.githubusercontent.com/80402261/170730060-34583d01-cfb0-41e3-aec6-d786809ca4ee.png)
 ![landing_page_bonita_cel](https://user-images.githubusercontent.com/80402261/170730103-68a8fb36-999d-4197-880a-a484fd41ca96.png)
 ![registro-cel-bonito](https://user-images.githubusercontent.com/80402261/170730145-a8e9be2a-6c51-41ed-8680-988ef517ca05.png)
+
+
+# REST/RESTFUL API
+
+Ok ok, eu sei que eu atrasei mas eu posso explicar, EU JURO! <br />
+Comecei essa semana tendo muita dificuldade de como implementar as APIS, pensei em usar os servlets como apis, que mandam pro model e lá ocorre o cadastro do candidato, empresa e vaga, e foi isso que eu fiz, só teve um pequeno problema, por algum motivo quando eu tentava comunicar o servlet com uma classe Groovy...dava erro (?). Eu também não entendi, fiquei o dia todo procurando a solução e tudo que tentei NÃO FUNCIONOU, com meu tempo acabando eu decidi ir fazer coisas de faculdade e dormir, quando acordei no outro dia eu estava Febril, tonto e com tosse, então fiquei 4 dias nervoso por causa do código enquanto tudo que meu cerébro pensava era o tempo que eu tava perdendo tendo que ficar na cama tomando remédio.  <br />
+
+Sabádo melhorei e decidi ajeitar o erro de novo, e dessa vez, munido de confiança e vias nasais limpas eu FALHEI NOVAMENTE! <br />
+Não entendi muito bem como ajeitar o erro que eu estava tendo mas descobri que uma classe Java funcionava, então, devido ao tempo acabando  eu decidi que usaria Java.  <br />
+
+Como o site está com vários Htmls, quando você manda o form e faz o request, se der sucesso ele te leva até a página de login, e se der erro um alerta bem grande aparece dizendo: ALGO DEU ERRADO MANINHO! 
+Outra coisa também é a impossibilidade de colocar dados errados, como estado com mais de 2 letras, ou um cpf com mais de 11 digitos. 
+É isso, agora é correr pra começar o kit 3! 
