@@ -163,4 +163,4 @@ Outra coisa também é a impossibilidade de colocar dados errados, como estado c
 
 # KIT 3 
 
-Opa, dá uma olhada nesse repo [aqui] ( https://github.com/paradizzo/JobCloud-Microservices ) 
+Opa, dá uma olhada nesse repo [aqui]( https://github.com/paradizzo/JobCloud-Microservices ) 
