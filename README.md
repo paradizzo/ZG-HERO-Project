@@ -159,3 +159,8 @@ Não entendi muito bem como ajeitar o erro que eu estava tendo mas descobri que 
 Como o site está com vários Htmls, quando você manda o form e faz o request, se der sucesso ele te leva até a página de login, e se der erro um alerta bem grande aparece dizendo: ALGO DEU ERRADO MANINHO! 
 Outra coisa também é a impossibilidade de colocar dados errados, como estado com mais de 2 letras, ou um cpf com mais de 11 digitos. 
 É isso, agora é correr pra começar o kit 3! 
+
+
+# KIT 3 
+
+Opa, dá uma olhada nesse repo [aqui] ( https://github.com/paradizzo/JobCloud-Microservices ) 
